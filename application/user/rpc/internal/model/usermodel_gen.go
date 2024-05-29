@@ -57,6 +57,13 @@ func newUserModel(conn sqlx.SqlConn, c cache.CacheConf, opts ...cache.Option) *d
 	}
 }
 
+func (m *defaultUserModel) withSession(session sqlx.Session) *defaultUserModel {
+	return &defaultUserModel{
+		CachedConn: m.CachedConn.WithSession(session),
+		table:      "`user`",
+	}
+}
+
 func (m *defaultUserModel) Delete(ctx context.Context, id int64) error {
 	data, err := m.FindOne(ctx, id)
 	if err != nil {

@@ -5,7 +5,9 @@ go 1.22.2
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/elastic/go-elasticsearch/v8 v8.13.1
+	github.com/golang/protobuf v1.5.4
 	github.com/hashicorp/consul/api v1.28.2
+	github.com/pkg/errors v0.9.1
 	github.com/zeromicro/go-zero v1.6.4
 	go.opentelemetry.io/otel v1.21.0
 	go.opentelemetry.io/otel/trace v1.21.0
@@ -37,7 +39,6 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-jwt/jwt/v4 v4.5.0 // indirect
 	github.com/golang/mock v1.6.0 // indirect
-	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/gnostic-models v0.6.8 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/gofuzz v1.2.0 // indirect

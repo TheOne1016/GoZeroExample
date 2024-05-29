@@ -1,0 +1,11 @@
+Name: user-rpc
+ListenOn: 0.0.0.0:9090
+DataSource: root:000000@tcp(10.111.196.140:3306)/beyond_user?parseTime=true
+CacheRedis:
+  - Host: 10.103.107.10:6379
+    Pass:
+    Type: node
+BizRedis:
+  Host: 10.103.107.10:6379
+  Pass:
+  Type: node
