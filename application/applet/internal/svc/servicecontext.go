@@ -16,7 +16,7 @@ type ServiceContext struct {
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
-	//自定义拦截器
+	//自定义客户端拦截器
 	userRpc := zrpc.MustNewClient(c.UserRPC, zrpc.WithUnaryClientInterceptor(interceptors.ClientErrorInterceptor()))
 	
 	return &ServiceContext{

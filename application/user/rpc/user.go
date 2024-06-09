@@ -33,7 +33,7 @@ func main() {
 			reflection.Register(grpcServer)
 		}
 	})
-	// 自定义拦截器
+	// 自定义server端的拦截器
 	s.AddUnaryInterceptors(interceptors.ServerErrorInterceptor())
 
 	defer s.Stop()
