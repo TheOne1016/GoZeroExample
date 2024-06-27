@@ -1,5 +1,5 @@
 Name: article.rpc
-ListenOn: 0.0.0.0:9090
+ListenOn: 0.0.0.0:8586
 Etcd:
   Hosts:
   - 127.0.0.1:2379

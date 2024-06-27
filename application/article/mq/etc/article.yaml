@@ -2,7 +2,7 @@ Name: mq
 KqConsumerConf:
   Name: article-kq-consumer
   Brokers:
-    - 127.0.1:9092
+    - 127.0.0.1:9092
   Group: group-like-count
   Topic: topic-like-count
   Offset: last
@@ -11,7 +11,7 @@ KqConsumerConf:
 ArticleKqConsumerConf:
   Name: article-cache-kq-consumer
   Brokers:
-    - 127.0.1:9092
+    - 127.0.0.1:9092
   Group: group-article-event
   Topic: topic-article-event
   Offset: last
@@ -26,7 +26,7 @@ Es:
   Addresses:
     - http://localhost:9200/
   Username: elastic
-  Password: HLmVfh-0Pr*YX5x4JSFl
+  Password: j8VzURn3vjqDJ+sC2ERM
 Prometheus:
   Host: 0.0.0.0
   Port: 9101
