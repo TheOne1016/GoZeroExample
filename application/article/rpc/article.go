@@ -8,6 +8,7 @@ import (
 	"GoZeroExample/application/article/rpc/internal/server"
 	"GoZeroExample/application/article/rpc/internal/svc"
 	"GoZeroExample/application/article/rpc/pb"
+	"GoZeroExample/pkg/consul"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
@@ -33,6 +34,14 @@ func main() {
 		}
 	})
 	defer s.Stop()
+
+
+	// 服务注册
+	err := consul.Register(c.Consul, fmt.Sprintf("%s:%d", c.ServiceConf.Prometheus.Host, c.ServiceConf.Prometheus.Port))
+	if err != nil {
+		fmt.Printf("register consul error: %v\n", err)
+	}
+	
 
 	fmt.Printf("Starting rpc server at %s...\n", c.ListenOn)
 	s.Start()
